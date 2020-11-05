@@ -1,4 +1,3 @@
-from PIL import Image
 from PIL import Image, ImageOps
 from os import listdir
 from os.path import isfile, join
