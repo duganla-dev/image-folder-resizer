@@ -3,18 +3,18 @@ from PIL import Image, ImageOps
 from os import listdir
 from os.path import isfile, join
 
-# ONLY put image files in this fir
+# ONLY put image files in this folder
 InputPath = './input'
-# The resized images will be placed in this dir
+# The resized images will be placed in this folder
 OutputPath = './output'
-# x, y
+# Output Rez x, y
 ImageResize = (266, 375)
 # Will Overwrite files if True
 Overwrite = False
 
-
 inputDir = [f for f in listdir(InputPath) if isfile(join(InputPath, f))]
 outputDir = [f for f in listdir(OutputPath) if isfile(join(OutputPath, f))]
+
 
 for fileName in inputDir:
     if fileName not in outputDir or Overwrite == True:
