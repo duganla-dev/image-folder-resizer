@@ -31,6 +31,15 @@ Set this values in the `main.py` file, then you can run the `main.py`
 ```bash
 python main.py
 ```
+## Code to just resize a Image
+
+```python
+image = Image.open('./youimage.jpg')
+orz = (266, 375) # The Output resolution x, y
+image = ImageOps.fit(image, orz, Image.ANTIALIAS, 0, (0.5, 0.5))
+# IMPORTANT: This will Overwrite anything with the same output filename
+image.save('./resizedImage.jpg')
+```
 
 ## Contributing
 Pull requests are welcome.
